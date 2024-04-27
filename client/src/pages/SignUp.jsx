@@ -1,6 +1,5 @@
-import { set } from 'mongoose';
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SingUp() {
   const [formData, setFormData]= useState({})
