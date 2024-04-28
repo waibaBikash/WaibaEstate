@@ -67,5 +67,5 @@ export default function SignUp() {
         </div>
         { error && <P className='text-red-500 mt-5'>{error}</P> }
     </div>
-  )
+  );
 }
