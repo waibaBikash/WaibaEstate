@@ -91,7 +91,7 @@ export default function Profile() {
               dispatch(deleteUserFailure(error.message));
             }
          };
-         const handleSingOut = async() => {
+         const handleSignOut = async() => {
           try {
             dispatch(signOutUserStart());
             const res = await fetch('/api/auth/signout');
@@ -102,7 +102,7 @@ export default function Profile() {
             }
             dispatch(deleteUserSuccess(data));
           } catch (error) {
-            dispatch(deleteUserSuccess(data.message));
+            dispatch(deleteUserFailure(data.message));
           }
          }
   return (
