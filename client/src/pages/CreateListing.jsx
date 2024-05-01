@@ -13,7 +13,8 @@ export default function CreateListing() {
   console.log(formData);
 
   const handleImageSubmit = (e) => {
-      if(files.length > 0 && files.length + formData.imageUrls.length < 7) {
+      if(files.length > 0 && files.length + formData
+        .imageUrls.length < 7) {
         setUploadinig(true);
         setImageUploadError(false);
         const promises = [];
@@ -32,12 +33,15 @@ export default function CreateListing() {
       .catch((err) => {
          setImageUploadError('Image upload failed (2 mb max per image)');
         setUploadinig(false);
+        console.log(formData);
     });
-       }else{
+       } 
+       else{
         setImageUploadError('You can only upload 6 image per listing');
         setUploadinig(false);
        }       
-  };
+     };
+
     const storeImage = async (file) => {
        return new Promise ((resolve, reject) => {
           const storage = getStorage(app);
@@ -54,11 +58,14 @@ export default function CreateListing() {
             (error) => {
               reject(error);
             },
-            () => {
-              getDownloadURL(uploadTask.snapshot.ref).then(downloadURL) => {
-                 resolve(downloadURL);
+              () => {
+                getDownloadURL(uploadTask.snapshot.ref)
+                .then((downloadURL) => {
+                  resolve(downloadURL);
+                });
               });
-        
+           });
+          };
 
     const handleRemoveImage = (index) => {
       setFormData({
