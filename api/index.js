@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO).then(() => {
 console.log(err);
   });
 
-const _dirname = path.relolve();
+const _dirname = path.resolve();
 
 const app = express();
 app.use(express.json());
@@ -33,7 +33,7 @@ app.use('/api/listing', listingRouter);
 
 app.use(express.static(path.join(_dirname, '/client/dist')));
 
-app.get('*', (req,res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(_dirname, 'client', 'dist',
 'index.html'));
 })
