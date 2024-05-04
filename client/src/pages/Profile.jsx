@@ -122,7 +122,7 @@ export default function Profile() {
             setShowListingsError(true);
           }
          }
-         const handleListingDelete = async() => {
+         const handleListingDelete = async(listingId) => {
           try {
             const res = await fetch(`/api/listing/delete/${listingId}`, {
               method: 'DELETE',
@@ -221,8 +221,7 @@ export default function Profile() {
                  </div>
             </div>
           ))}  
-          </div>
-          }
+          </div> }
     </div>
   );
 }
