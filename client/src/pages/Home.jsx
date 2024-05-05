@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import SwiperCore from '../components/ListingItem';
+import SwiperCore from 'swiper';
+import  'swiper/CSS/bundle';
 import ListingItem from '../components/ListingItem';
+
 
 export default function Home() {
      const [offerListings, setOfferListings] = useState([]);
@@ -39,6 +41,7 @@ export default function Home() {
         try {
           const res = await fetch('/api/listing/get?type=sale&limit=4');
           const data = await res.json();
+          setSaleListings(data);
         } catch (error) {
           log(error);
         }
@@ -48,19 +51,19 @@ export default function Home() {
   return (
     <div>
       {/* top */}
-      <div className='flex flex-col gap-6 p-28 max-w-6xl ms-auto'>
-               <h1 className='text-slate-700 font-bold text-3xl lg:text-6xl'>
+      <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl ms-auto'>
+           <h1 className='text-slate-700 font-bold text-3xl lg:text-3xl'>
                 Find your next <span className='text-slate-500 '>Perfect</span>
                 <br />
                 place with ease
-               </h1>
+            </h1>
                <div className="text-gray-400 text-xs sm:text-sm">
                 Waiba Estate is the best place to find your next perfect place to live.
                 <br />
                 We have a wide range of peroperties for you to choose from.
                </div>
                <Link 
-               to={'/serch'}
+               to={"/search"}
                className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'>
                 Let's get started...
                </Link>
@@ -123,7 +126,7 @@ export default function Home() {
               <div className="">
                 <div className="my-3">
                   <h2 className='text-2xl font-semibold text-slate-600'>
-                    Recent place for sale
+                    Recent places for sale
                   </h2>
                   <Link className='text-sm text-blue-800 hover:underline' to={'/search?type=rent'}>Show more places for sale</Link>
                 </div>

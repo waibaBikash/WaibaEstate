@@ -114,7 +114,7 @@ export default function Search() {
     const onShowMoreClick = async () => {
     const numberOfListings = listings.length;
     const startIndex = numberOfListings;
-    const urlIndex = new URLSearchParams(location.search);
+    const urlParams = new URLSearchParams(location.search);
     urlParams.set('startIndex', startIndex);
     const searchQuery = urlParams.toString();
     const res = await fetch(`/api/listing/get?
@@ -244,7 +244,8 @@ export default function Search() {
                     <ListingItem key={listing._id} listing = {listing} />
                 ))}
                   {showMore && (
-                    <button onClick={onShowMoreClick}
+                    <button onClick={
+                      onShowMoreClick}
                     className="text-green-700 hover:underline p-7 text-center w-full">
                       Show more
                     </button>
