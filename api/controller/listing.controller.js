@@ -76,7 +76,7 @@ export const getListings = async(req, res, next) => {
     let parking = req.query.parking;
 
     if(parking === undefined || parking  === 'false'){
-      parking = {$in: ['sale', 'rent']};
+      parking = {$in: [false, true]};
     }
     let type = req.query.type;
     
