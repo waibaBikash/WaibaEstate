@@ -53,8 +53,7 @@ export default function Search() {
       setLoading(true);
       setShowMore(false);
       const searchQuery = urlParams.toString();
-      const res = await fetch(`/api/listing/get?
-      ${searchQuery}`);
+      const res = await fetch(`/api/listing/get?${searchQuery}`);
       const data = await res.json();
       if(data.length > 8) {
         setShowMore(true);
@@ -94,7 +93,7 @@ export default function Search() {
     if(e.target.id === 'sort_order'){
       const sort = e.target.value.split('_')[0] || 'created_at';
       const order = e.target.value.split('_')[1] || 'desc';
-      sidebardata({ ...sidebardata, sort, order});
+      setSidebardata({ ...sidebardata, sort, order});
     }
   };
   const handleSubmit = (e) => {
@@ -117,8 +116,7 @@ export default function Search() {
     const urlParams = new URLSearchParams(location.search);
     urlParams.set('startIndex', startIndex);
     const searchQuery = urlParams.toString();
-    const res = await fetch(`/api/listing/get?
-    ${searchQuery}`);
+    const res = await fetch(`/api/listing/get?${searchQuery}`);
     const data = await res.json();
     if(data.length < 9){
       setShowMore(false);
@@ -129,22 +127,22 @@ export default function Search() {
   return (
     <div className="flex flex-col md:flex-row">
       <div className="p-7 border-b-2 md:border-r-2 md:min-h-screen">
-          <form onSubmit={handleSubmit}
-          className="flex flex-col gap-8">
-            <div className="flex item-center gap-2">
-               <label className="whitespace-nowrap font-semibold ">
-                Search Term:
-               </label>
-               <input type="text" 
-               id="searchTerm"
-               placeholder="search..."
-               className="border rounded-lg p-3 w-full"
-               value={sidebardata.searchTerm}
-               onChange={handleChange}
-               />
+        <form onSubmit={handleSubmit}
+              className="flex flex-col gap-8">
+              <div className="flex items-center gap-2">
+                <label className="whitespace-nowrap font-semibold ">
+                  Search Term:
+                </label>
+                <input type="text" 
+                id="searchTerm"
+                placeholder="search..."
+                className="border rounded-lg p-3 w-full"
+                value={sidebardata.searchTerm}
+                onChange={handleChange}
+                />
 
-            </div>
-               <div className="flex gap-2 flex-wrap item-center">
+              </div>
+               <div className="flex gap-2 flex-wrap items-center">
                   <label className="font-semibold">
                     Type:
                   </label>
@@ -185,7 +183,7 @@ export default function Search() {
                          <span>Offer</span>
                     </div>
                </div>
-               <div className="flex gap-2 flex-wrap item-center">
+               <div className="flex gap-2 flex-wrap items-center">
                   <label className="font-semibold">
                     Amenities:
                   </label>
@@ -224,10 +222,10 @@ export default function Search() {
                  </div>
                    <button className="bg-slate-700 p-3 rounded-lg uppercase hover:opacity-95 ">
                     Serach
-                    </button>
-          </form>
-     </div>
-        <div className="flex-1">
+                   </button>
+        </form>
+      </div>
+         <div className="flex-1">
             <h1 className="text-3xl font-semibold border-b p-3 text-slate-700">
               Listing results:
             </h1>
@@ -251,7 +249,7 @@ export default function Search() {
                     </button>
                   )}
             </div>
-        </div>
-  </div>
+         </div>
+   </div>
   );
 }
