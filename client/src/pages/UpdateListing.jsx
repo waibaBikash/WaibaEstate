@@ -93,6 +93,7 @@ export default function CreateListing() {
                 getDownloadURL(uploadTask.snapshot.ref)
                 .then((downloadURL) => {
                   resolve(downloadURL);
+                  console.log(downloadURL);
                 });
               });
            });

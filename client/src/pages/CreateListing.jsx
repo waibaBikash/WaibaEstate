@@ -38,8 +38,9 @@ export default function CreateListing() {
         for (let i = 0; i < files.length; i++) {
           promises.push(storeImage(files[i]));
         }
-        promises.all(promises)
+        Promise.all(promises)
         .then((urls) => {
+          console.log(urls);
           setFormData({...formData, 
             imageUrls: formData.imageUrls.concat(urls),
           });
@@ -69,7 +70,7 @@ export default function CreateListing() {
             (snapshot) => {
             const progress = 
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            console.log(`Upload is ${progress}% done`);
+            console.log(`ad is ${progress}% done`);
             },
             (error) => {
               reject(error);
@@ -78,6 +79,7 @@ export default function CreateListing() {
                 getDownloadURL(uploadTask.snapshot.ref)
                 .then((downloadURL) => {
                   resolve(downloadURL);
+                  console.log(downloadURL);
                 });
               });
            });
