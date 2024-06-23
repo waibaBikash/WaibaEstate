@@ -64,7 +64,6 @@ export default function CreateListing() {
       .catch((err) => {
          setImageUploadError('Image upload failed (2 mb max per image)');
         setUploadinig(false);
-
         });
        } 
        else{
@@ -140,7 +139,6 @@ export default function CreateListing() {
           body: JSON.stringify({
             ...formData,
             userRef: currentUser._id,
-
           }),
         });
         const data = await res.json();
