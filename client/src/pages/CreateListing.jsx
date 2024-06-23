@@ -50,7 +50,6 @@ export default function CreateListing() {
       .catch((err) => {
          setImageUploadError('Image upload failed (2 mb max per image)');
         setUploadinig(false);
-
         });
        } 
        else{
@@ -58,7 +57,6 @@ export default function CreateListing() {
         setUploadinig(false);
        }       
      };
-
     const storeImage = async (file) => {
        return new Promise ((resolve, reject) => {
           const storage = getStorage(app);
