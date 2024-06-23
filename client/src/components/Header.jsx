@@ -40,7 +40,6 @@ export default function Header() {
            <button>
            <FaSearch className='text-slate-600'/>
            </button>
-          
         </form>
         <ul className='flex gap-4'>
           <Link to='/home'>
