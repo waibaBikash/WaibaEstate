@@ -1,4 +1,4 @@
-import { LuSigma } from "react-icons/lu";
+
 import Listing from "../models/listing.model.js";
 import { errorHandler } from "../utils/error.js";
 
@@ -58,7 +58,6 @@ export const getListing = async (req, res, next) => {
   next(error);
  }
 };
-
 
 export const getListings = async(req, res, next) => {
   try {
