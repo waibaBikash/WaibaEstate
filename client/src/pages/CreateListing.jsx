@@ -82,7 +82,6 @@ export default function CreateListing() {
               });
            });
           };
-
     const handleRemoveImage = (index) => {
       setFormData({
         ...formData, 
@@ -124,7 +123,6 @@ export default function CreateListing() {
           body: JSON.stringify({
             ...formData,
             userRef: currentUser._id,
-
           }),
         });
         const data = await res.json();
@@ -240,7 +238,6 @@ export default function CreateListing() {
                      )}
                 </div>
             </div>
-           
            <div className='flex flex-col flex-1 gap-4'>
              <p className='font-semibold'>
               Images:
