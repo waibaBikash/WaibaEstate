@@ -8,7 +8,6 @@ export default function ListingItem({ listing }) {
       <Link to={`/listing/${listing._id}`}>
         <img src={
          listing.imageUrls[0] ||
-
          'https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg'}
          alt="listing cover" 
          className='h-[320px] sm:[220px] w-full object-cover hover:scale-105 transition-scale duration-300'/>
