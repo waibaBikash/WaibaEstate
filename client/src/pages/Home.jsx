@@ -25,7 +25,6 @@ export default function Home() {
           console.log(error);
         }
       };
-
       const fetchRentListings = async () => {
         try {
           const res = await fetch('/api/listing/get?type=rent&limit=4');
