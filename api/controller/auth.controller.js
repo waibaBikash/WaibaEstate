@@ -58,7 +58,6 @@ export const google = async (req, res, next) =>{
       .cookie('access-token', token, { httpOnly: true })
       .status(200)
       .json(rest);
-
     }
   } catch (error) {
     next(error);
