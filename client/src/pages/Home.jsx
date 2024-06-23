@@ -35,7 +35,6 @@ export default function Home() {
           console.log(error);
         }
       };
-      
       const fetchSaleListings = async () => {
         try {
           const res = await fetch('/api/listing/get?type=sale&limit=4');
