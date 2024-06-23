@@ -119,7 +119,6 @@ export default function Home() {
                  </div>
               </div>
              )}
-              
              {saleListings && saleListings.length > 0 && (
               <div className="">
                 <div className="my-3">
