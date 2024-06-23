@@ -48,7 +48,6 @@ export default function Search() {
         order: orderFromUrl || 'desc',
       });
     }
-
     const fetchListings = async () => {
       setLoading(true);
       setShowMore(false);
