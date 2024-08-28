@@ -7,7 +7,10 @@ export default function About() {
         About Waiba Estate
       </h1>
       <p className="mb-4 text-slate-700">
-        Waiba Estate is a leading real estate agency that specializes in helping clients buy, sell, and rent peroperties in the most desirble neighborhoods. Our team of experienced agents is dedicated to providing exceptional services and making the buying and selling process as smooth as possible.
+        Waiba Estate is a leading real estate agency that specializes in helping
+         clients buy, sell, and rent peroperties in the most desirble neighborhoods. 
+         Our team of experienced agents is dedicated to providing exceptional services
+          and making the buying and selling process as smooth as possible.
       </p>
       <p className="mb-4 text-slate-700">
         Our mission is to help our clients achieve their real estate goals by providing expert advice, personalized service, and a deep uderstanding of the local market. Whether you are looking to buy, sell or rent a property, we are here to help you every of the way.
