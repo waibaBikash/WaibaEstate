@@ -18,7 +18,10 @@ export default function About() {
          Whether you are looking to buy, sell or rent a property, we are here to help you every of the way.
       </p>
       <p className="mb-4 text-slate-700">
-        Our team of agents has a wealth of experience and knowledge in the real estate industry, and we are committed to providing the highest level of sevices to our clients. We blieve that buying or selling a property should be an exciting and rewarding experience, and we are dedicated to making that a raality for each and evey one of our clients.
+        Our team of agents has a wealth of experience and knowledge in the real estate industry,
+         and we are committed to providing the highest level of sevices to our clients. We blieve 
+         that buying or selling a property should be an exciting and rewarding experience, and we
+          are dedicated to making that a raality for each and evey one of our clients.
       </p>
     </div>
   );
