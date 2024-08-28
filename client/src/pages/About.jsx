@@ -17,7 +17,8 @@ export default function About() {
         expert advice, personalized service, and a deep uderstanding of the local market.
          Whether you are looking to buy, sell or rent a property, we are here to help you every of the way.
       </p>
-      <p className="mb-4 text-slate-700">
+      <p 
+      className="mb-4 text-slate-700">
         Our team of agents has a wealth of experience and knowledge in the real estate industry,
          and we are committed to providing the highest level of sevices to our clients. We blieve 
          that buying or selling a property should be an exciting and rewarding experience, and we
