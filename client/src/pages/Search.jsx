@@ -216,7 +216,9 @@ export default function Search() {
                          <option 
                           value='regularPrice_desc'>Price high to low
                           </option>
-                         <option value='regularPrice_asc'>Price low  to high</option>
+                         <option 
+                         value='regularPrice_asc'>Price low  to high
+                         </option>
                          <option value='createdAt_desc'>Lastest</option>
                          <option value='reatedAt_asc'>Oldest</option>
                       </select>
