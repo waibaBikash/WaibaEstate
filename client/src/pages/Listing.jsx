@@ -93,7 +93,9 @@ export default function Listing() {
                   )}
               </div>
              <p className='text-slate-800 '>
-              <span className='font-semibold text-black'>Description - </span>
+              <span 
+               className='font-semibold text-black'>Description - 
+               </span>
               {listing.description}
              </p>
              <ul 
