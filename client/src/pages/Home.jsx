@@ -91,7 +91,8 @@ export default function Home() {
                    <h2 className='text-2xl font-semibold text-slate-600'>
                     Recent offers
                    </h2>
-                     <Link className='text-sm text-blue-800 hover:underline'
+                     <Link
+                      className='text-sm text-blue-800 hover:underline'
                      to={'/search?offer=true'}> Show more offers   
                      </Link>
                  </div>
