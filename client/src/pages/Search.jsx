@@ -222,7 +222,9 @@ export default function Search() {
                          <option
                           value='createdAt_desc'>Lastest
                           </option>
-                         <option value='reatedAt_asc'>Oldest</option>
+                         <option 
+                         value='reatedAt_asc'>Oldest
+                         </option>
                       </select>
                  </div>
                    <button 
