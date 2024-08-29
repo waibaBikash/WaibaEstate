@@ -55,7 +55,8 @@ export default function Listing() {
             </SwiperSlide>
           ))}
         </Swiper>
-       <div className='fixed top-[13%] right-[3%] z-10 border border-rounded-full w-12 h-12 flex justify-center items-center bg-slate-100 crusor-pointer'>
+       <div 
+        className='fixed top-[13%] right-[3%] z-10 border border-rounded-full w-12 h-12 flex justify-center items-center bg-slate-100 crusor-pointer'>
           <FaShare className='text-slate-500'
           onClick= {() =>{
             navigator.clipboard.writeText(window.location.herf);
