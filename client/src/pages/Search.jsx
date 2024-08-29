@@ -219,7 +219,8 @@ export default function Search() {
                          <option value='reatedAt_asc'>Oldest</option>
                       </select>
                  </div>
-                   <button className="bg-slate-700 p-3 rounded-lg uppercase hover:opacity-95 ">
+                   <button 
+                   className="bg-slate-700 p-3 rounded-lg uppercase hover:opacity-95 ">
                     Serach
                    </button>
         </form>
