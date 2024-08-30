@@ -153,7 +153,9 @@ export default function CreateListing() {
               value={formData.description}
               />
               <input 
-              type="text"  placeholder='Address' className='border p-3 rounded-lg' id='address' required
+              type="text"  placeholder='Address' 
+              className='border p-3 rounded-lg' 
+              id='address' required
               onChange={handleChange}
               value={formData.address}
               />
