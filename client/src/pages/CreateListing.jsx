@@ -148,7 +148,9 @@ export default function CreateListing() {
               value={formData.name}
               />
               <textarea 
-              type="text"  placeholder='Description' className='border p-3 rounded-lg' id='description' required
+              type="text"  placeholder='Description'
+               className='border p-3 rounded-lg' 
+               id='description' required
               onChange={handleChange}
               value={formData.description}
               />
