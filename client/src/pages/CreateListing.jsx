@@ -202,7 +202,9 @@ export default function CreateListing() {
                       </div>
                      <div className='flex items-center gap-2'>
                         <input 
-                        type='number' id='bathrooms' min='1' max='10' required className='p-3 border border-gray-300 rounded-lg'
+                        type='number' id='bathrooms' min='1' 
+                        max='10' required
+                         className='p-3 border border-gray-300 rounded-lg'
                          onChange={handleChange}
                          value={formData.bathrooms}/>
                         <p>Baths</p>
