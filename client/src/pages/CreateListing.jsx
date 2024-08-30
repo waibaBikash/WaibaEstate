@@ -288,7 +288,9 @@ export default function CreateListing() {
                  uppercase hover:opacity-95 disabled:opacity-80'>
                   {loading ? 'Creating...' : 'Create Listing'}
                </button>
-               {error && <p className='text-red-700 text-sm'>{error}</p> }
+               {
+               error && <p className='text-red-700 text-sm'>{error}</p>
+                }
           </div>
       </form>
     </main>
